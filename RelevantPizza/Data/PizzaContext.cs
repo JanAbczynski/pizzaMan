@@ -14,7 +14,7 @@ namespace RelevantPizza.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
-        public DbSet<OrderItemDetail> OrderItemDetails { get; set; }
+        public DbSet<InventoryItem> InventoryItems { get; set; }
       
 
 

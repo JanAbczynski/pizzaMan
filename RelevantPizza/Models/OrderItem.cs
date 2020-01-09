@@ -18,7 +18,7 @@ namespace RelevantPizza.Models
         public OrderItemType Type { get; set; }
         public decimal Price { get; set; }
 
-        IEnumerable<OrderItemDetail> OrderItemDetail { get; set; }
+        IEnumerable<InventoryItem> OrderItemDetail { get; set; }
 
 
     }
