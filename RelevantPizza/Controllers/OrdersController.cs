@@ -72,6 +72,7 @@ namespace RelevantPizza.Controllers
             if (ModelState.IsValid)
             {
                 Order order = new Order();
+              
                 order.Customer = _context.Customers.FirstOrDefault(c => c.ID == orderVM.CustomerID);
                 order.OrderType = orderVM.OrderType;
                 order.OrderItems = new List<OrderItem>();
@@ -166,6 +167,12 @@ namespace RelevantPizza.Controllers
         private bool OrderExists(int id)
         {
             return _context.Orders.Any(e => e.ID == id);
+        }
+
+        public async Task<IActionResult> AddItem()
+        {
+
+            return RedirectToAction("Create", "OrderItems");
         }
     }
 }
